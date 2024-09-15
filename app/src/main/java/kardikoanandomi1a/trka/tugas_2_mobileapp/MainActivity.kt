@@ -32,18 +32,11 @@ class MainActivity : AppCompatActivity() {
         btnLogin.setOnClickListener() {
             val username = etUsername.text.toString()
             val password = etPassword.text.toString()
-
-            btnLogin.setOnClickListener() {
-                val username = etUsername.text.toString()
-                val password = etPassword.text.toString()
-
-                if (username == "admin" && password == "123456") {
-                    val intent4 = Intent(this@MainActivity, HomePage::class.java)
-                    startActivity(intent4)
-                } else {
-                    Toast.makeText(this, "username atau password salah", Toast.LENGTH_SHORT).show()
-                }
-
+            if (username == "admin" && password == "123456") {
+                val intent4 = Intent(this@MainActivity, HomePage::class.java)
+                startActivity(intent4)
+            } else {
+                Toast.makeText(this, "username atau password salah", Toast.LENGTH_SHORT).show()
             }
 
         }
